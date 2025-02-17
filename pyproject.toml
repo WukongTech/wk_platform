@@ -1,0 +1,48 @@
+[build-system]
+requires = ["setuptools>=45", "setuptools_scm[toml]>=6.2"]
+build-backend = "setuptools.build_meta"
+
+
+
+
+[project]
+name = "wk_trade_toolkit"
+description = "Algorithm trade toolkit"
+authors = [
+    {name = "WukongTech", email = "lianghua@wukongtz.com"},
+]
+readme = "README.md"
+requires-python = ">=3.7"
+classifiers = [
+#    "Framework :: Django",
+    "Development Status :: 2 - Pre-Alpha",
+    "Programming Language :: Python :: 3",
+]
+dynamic = ["version"]
+dependencies = [
+    "pandas<=2.1.4",
+    "pyalgotrade",
+    "toml",
+    "sqlalchemy",
+    "pandarallel",
+    "cx_Oracle",
+    "tables",
+    "openpyxl",
+    "tqdm",
+    "pydash",
+    "pyecharts",
+    "statsmodels",
+    "wk_db",
+    "pyecharts",
+    "scikit-learn",
+    "ibis-framework",
+    "cvxpy",
+
+]
+
+[tool.setuptools_scm]
+write_to = "src/wk_platform/_version.py"
+
+
+[tool.setuptools.dynamic]
+version = {attr = "wk_platform._version.__version__"}
